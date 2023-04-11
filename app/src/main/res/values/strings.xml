@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Trab1</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="musica_1">Mc Pose Anos 90</string>
+    <string name="musica_2">TNT</string>
+    <string name="musica_3">Mc Pose anos 80 (dia ta frio pa congelá)</string>
+    <string name="musica_4">Se eu Largar o Freio!</string>
+    <string name="musica_5">Camisa 10</string>
+    <string name="musica_6">Meteoro da Paixão</string>
+    <string name="musica_7">Don´t Let Me Down</string>
+
+    <string name="time_1">2:16</string>
+    <string name="time_2">3:35</string>
+    <string name="time_3">3:54</string>
+    <string name="time_4">4:25</string>
+    <string name="time_5">3:18</string>
+    <string name="time_6">3:26</string>
+    <string name="time_7">3:32</string>
+</resources>
