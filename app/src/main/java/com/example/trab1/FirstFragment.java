@@ -42,6 +42,7 @@ private FragmentFirstBinding binding;
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
@@ -54,6 +55,12 @@ private FragmentFirstBinding binding;
         recyclerView.setHasFixedSize(true);
         Adapter adapter = new Adapter(getContext(), musicsArrayList);
         recyclerView.setAdapter(adapter);
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("penes");
+            }
+        });
     }
 
     private void dataInitialize() {
@@ -91,7 +98,7 @@ private FragmentFirstBinding binding;
         };
 
         for (int i=0; i< musicsNome.length; i++){
-            Musics music = new Musics(musicsNome[i], capaMusica[i]);
+            Musics music = new Musics(musicsNome[i], duracaoMusica[i], capaMusica[i]);
             musicsArrayList.add(music);
         }
 

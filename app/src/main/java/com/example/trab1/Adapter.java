@@ -39,6 +39,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         Musics musics = musicsArrayList.get(position);
         holder.nomeMusica.setText(musics.nome);
         holder.capaMusica.setImageResource(musics.capaMusica);
+        holder.tempo.setText(musics.tempo);
     }
 
     @Override
