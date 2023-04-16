@@ -16,13 +16,15 @@ import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
+    private final RecyclerViewInterface recyclerViewInterface;
     Context context;
     ArrayList<Musics> musicsArrayList;
 
-    public Adapter(Context context, ArrayList<Musics> musicsArrayList) {
+    public Adapter(Context context, ArrayList<Musics> musicsArrayList, RecyclerViewInterface recyclerViewInterface) {
 
         this.context = context;
         this.musicsArrayList = musicsArrayList;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
@@ -31,7 +33,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         View v = LayoutInflater.from(context).inflate(R.layout.item_musicas, parent, false);
 
-        return new MyViewHolder(v);
+        return new MyViewHolder(v, recyclerViewInterface);
     }
 
     @Override
@@ -51,11 +53,24 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         ImageView capaMusica;
         TextView nomeMusica, tempo;
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             capaMusica = itemView.findViewById(R.id.capaMusica);
             nomeMusica = itemView.findViewById(R.id.nomeMusica);
             tempo = itemView.findViewById(R.id.tempo);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (recyclerViewInterface != null){
+                        int pos = getAdapterPosition();
+
+                        if (pos != RecyclerView.NO_POSITION){
+                            recyclerViewInterface.onItemClick(pos);
+                        }
+                    }
+                }
+            });
         }
     }
 

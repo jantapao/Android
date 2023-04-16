@@ -10,19 +10,155 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
-    <string name="musica_1">Mc Pose Anos 90</string>
-    <string name="musica_2">TNT</string>
-    <string name="musica_3">Mc Pose anos 80 (dia ta frio pa congelá)</string>
-    <string name="musica_4">Se eu Largar o Freio!</string>
-    <string name="musica_5">Camisa 10</string>
-    <string name="musica_6">Meteoro da Paixão</string>
-    <string name="musica_7">Don´t Let Me Down</string>
 
-    <string name="time_1">2:16</string>
-    <string name="time_2">3:35</string>
-    <string name="time_3">3:54</string>
-    <string name="time_4">4:25</string>
-    <string name="time_5">3:18</string>
-    <string name="time_6">3:26</string>
-    <string name="time_7">3:32</string>
+    <string-array name="sertanejos">
+        <item>Termina comigo antes</item>
+        <item>Abalo emocional</item>
+        <item>Vagabundo chora</item>
+        <item>Acabei de terminar</item>
+        <item>Bloqueado</item>
+        <item>Erro planejado</item>
+        <item>Ciclo vicioso</item>
+        <item>Insubstituível</item>
+        <item>Conselho bom</item>
+        <item>Não me arranha</item>
+    </string-array>
+    <string-array name="pagodes">
+        <item>Ele ou Eu</item>
+        <item>Pode Parar</item>
+        <item>Ninguém Merece Amar Sozinho</item>
+        <item>Saudade Na Terra</item>
+        <item>Só um Pagode</item>
+        <item>Me perdoa</item>
+        <item>Graveto</item>
+        <item>Falta Você</item>
+        <item>Vencedor</item>
+        <item>Você Não Sabe Voltar</item>
+    </string-array>
+    <string-array name="eletronicas">
+        <item>10:35</item>
+        <item>I´m Good</item>
+        <item>Where Are You Now</item>
+        <item>Bad Memories</item>
+        <item>Ferrari</item>
+        <item>Hot In It</item>
+        <item>Belly Dancer</item>
+        <item>What You Do To Me</item>
+        <item>Do It To It</item>
+        <item>The Motto</item>
+    </string-array>
+    <string-array name="todos">
+        <item>Termina comigo antes</item>
+        <item>Abalo emocional</item>
+        <item>Vagabundo chora</item>
+        <item>Acabei de terminar</item>
+        <item>Bloqueado</item>
+        <item>Erro planejado</item>
+        <item>Ciclo vicioso</item>
+        <item>Insubstituível</item>
+        <item>Conselho bom</item>
+        <item>Não me arranha</item>
+        <item>Ele ou Eu</item>
+        <item>Pode Parar</item>
+        <item>Ninguém Merece Amar Sozinho</item>
+        <item>Saudade Na Terra</item>
+        <item>Só um Pagode</item>
+        <item>Me perdoa</item>
+        <item>Graveto</item>
+        <item>Falta Você</item>
+        <item>Vencedor</item>
+        <item>Você Não Sabe Voltar</item>
+        <item>10:35</item>
+        <item>I´m Good</item>
+        <item>Where Are You Now</item>
+        <item>Bad Memories</item>
+        <item>Ferrari</item>
+        <item>Hot In It</item>
+        <item>Belly Dancer</item>
+        <item>What You Do To Me</item>
+        <item>Do It To It</item>
+        <item>The Motto</item>
+    </string-array>
+    <string-array name="duracao_sertanejo">
+        <item>3:16</item>
+        <item>2:45</item>
+        <item>2:43</item>
+        <item>3:50</item>
+        <item>2:55</item>
+        <item>2:46</item>
+        <item>3:06</item>
+        <item>3:34</item>
+        <item>3:30</item>
+        <item>2:49</item>
+    </string-array>
+    <string-array name="duracao_pagodes">
+        <item>3:22</item>
+        <item>3:09</item>
+        <item>3:50</item>
+        <item>2:51</item>
+        <item>2:22</item>
+        <item>3:47</item>
+        <item>2:42</item>
+        <item>3:39</item>
+        <item>3:49</item>
+        <item>3:07</item>
+    </string-array>
+    <string-array name="duracao_eletronicas">
+        <item>3:22</item>
+        <item>3:09</item>
+        <item>3:50</item>
+        <item>2:51</item>
+        <item>2:22</item>
+        <item>3:47</item>
+        <item>2:42</item>
+        <item>3:39</item>
+        <item>3:49</item>
+        <item>3:07</item>
+    </string-array>
+    <string-array name="duracao_todos">
+        <item>3:16</item>
+        <item>2:45</item>
+        <item>2:43</item>
+        <item>3:50</item>
+        <item>2:55</item>
+        <item>2:46</item>
+        <item>3:06</item>
+        <item>3:34</item>
+        <item>3:30</item>
+        <item>2:49</item>
+        <!--paodes abaixo-->
+        <item>3:22</item>
+        <item>3:09</item>
+        <item>3:50</item>
+        <item>2:51</item>
+        <item>2:22</item>
+        <item>3:47</item>
+        <item>2:42</item>
+        <item>3:39</item>
+        <item>3:49</item>
+        <item>3:07</item>
+        <!--eletronicas abaixo-->
+        <item>3:22</item>
+        <item>3:09</item>
+        <item>3:50</item>
+        <item>2:51</item>
+        <item>2:22</item>
+        <item>3:47</item>
+        <item>2:42</item>
+        <item>3:39</item>
+        <item>3:49</item>
+        <item>3:07</item>
+
+    </string-array>
+
+
+
+    <string-array name="tipos">
+        <item>Todos</item>
+        <item>Sertanejo</item>
+        <item>Eletronica</item>
+        <item>Pagode</item>
+    </string-array>
+
+
 </resources>
