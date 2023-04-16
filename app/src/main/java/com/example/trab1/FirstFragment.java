@@ -26,6 +26,8 @@ public class FirstFragment extends Fragment implements RecyclerViewInterface{
     private ArrayList<Musics> musicsArrayList = new ArrayList<Musics>(){};
     private String[] musicsNome;
     private int[] capaMusica;
+
+    private int[] somMusica;
     private String[] duracaoMusica;
     private RecyclerView recyclerView;
     private MediaPlayer mediaPlayer;
@@ -112,9 +114,43 @@ public class FirstFragment extends Fragment implements RecyclerViewInterface{
 
                 duracaoMusica = getResources().getStringArray(R.array.duracao_todos);
 
+
+                somMusica = new int[]{
+                        R.raw.s1,
+                        R.raw.s2,
+                        R.raw.s3,
+                        R.raw.s4,
+                        R.raw.s5,
+                        R.raw.s6,
+                        R.raw.s7,
+                        R.raw.s8,
+                        R.raw.s9,
+                        R.raw.s10,
+                        R.raw.p1,
+                        R.raw.p2,
+                        R.raw.p3,
+                        R.raw.p4,
+                        R.raw.p5,
+                        R.raw.p6,
+                        R.raw.p7,
+                        R.raw.p8,
+                        R.raw.p9,
+                        R.raw.p10,
+                        R.raw.p1,
+                        R.raw.p2,
+                        R.raw.p3,
+                        R.raw.p4,
+                        R.raw.p5,
+                        R.raw.p6,
+                        R.raw.p7,
+                        R.raw.p8,
+                        R.raw.p9,
+                        R.raw.p10,
+                };
+
                 for (int i=0; i< musicsNome.length; i++){
                     System.out.println(musicsNome[i]);
-                    Musics music = new Musics(musicsNome[i], duracaoMusica[i], capaMusica[i]);
+                    Musics music = new Musics(musicsNome[i], duracaoMusica[i], capaMusica[i], somMusica[i]);
                     musicsArrayList.add(music);
                 }
                 Adapter adapter = new Adapter(getContext(), musicsArrayList, this);
@@ -140,16 +176,29 @@ public class FirstFragment extends Fragment implements RecyclerViewInterface{
 
                 duracaoMusica = getResources().getStringArray(R.array.duracao_sertanejo);
 
+                somMusica = new int[]{
+                        R.raw.s1,
+                        R.raw.s2,
+                        R.raw.s3,
+                        R.raw.s4,
+                        R.raw.s5,
+                        R.raw.s6,
+                        R.raw.s7,
+                        R.raw.s8,
+                        R.raw.s9,
+                        R.raw.s10,
+                };
+
                 for (int i=0; i< musicsNome.length; i++){
                     System.out.println(musicsNome[i]);
-                    Musics music = new Musics(musicsNome[i], duracaoMusica[i], capaMusica[i]);
+                    Musics music = new Musics(musicsNome[i], duracaoMusica[i], capaMusica[i], somMusica[i]);
                     musicsArrayList.add(music);
                 }
                 adapter = new Adapter(getContext(), musicsArrayList, this);
                 recyclerView.setAdapter(adapter);
                 break;
             case 2:
-                musicsArrayList = new ArrayList<>();
+                /*musicsArrayList = new ArrayList<>();
                 musicsNome = getResources().getStringArray(R.array.eletronicas);
 
                 capaMusica = new int[]{
@@ -172,7 +221,7 @@ public class FirstFragment extends Fragment implements RecyclerViewInterface{
                     musicsArrayList.add(music);
                 }
                 adapter = new Adapter(getContext(), musicsArrayList, this);
-                recyclerView.setAdapter(adapter);
+                recyclerView.setAdapter(adapter);*/
                 break;
             case 3:
                 musicsArrayList = new ArrayList<>();
@@ -193,8 +242,21 @@ public class FirstFragment extends Fragment implements RecyclerViewInterface{
 
                 duracaoMusica = getResources().getStringArray(R.array.duracao_pagodes);
 
+                somMusica = new int[]{
+                        R.raw.p1,
+                        R.raw.p2,
+                        R.raw.p3,
+                        R.raw.p4,
+                        R.raw.p5,
+                        R.raw.p6,
+                        R.raw.p7,
+                        R.raw.p8,
+                        R.raw.p9,
+                        R.raw.p10,
+                };
+
                 for (int i=0; i< musicsNome.length; i++){
-                    Musics music = new Musics(musicsNome[i], duracaoMusica[i], capaMusica[i]);
+                    Musics music = new Musics(musicsNome[i], duracaoMusica[i], capaMusica[i],somMusica[i]);
                     musicsArrayList.add(music);
                 }
                 adapter = new Adapter(getContext(), musicsArrayList, this);
@@ -214,7 +276,11 @@ public class FirstFragment extends Fragment implements RecyclerViewInterface{
     @Override
     public void onItemClick(int position) {
 
+        ArrayList<Musics> music = musicsArrayList;
         Intent intent = new Intent(getActivity(), PlayerActivity.class);
+        intent.putExtra("nome", music.get(position).nome);
+        intent.putExtra("capa", music.get(position).capaMusica);
+        intent.putExtra("som", music.get(position).somMusica);
         startActivity(intent);
     }
 }
