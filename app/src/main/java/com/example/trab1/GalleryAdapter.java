@@ -1,12 +1,12 @@
 package com.example.trab1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,16 +19,29 @@ public class GalleryAdapter extends ArrayAdapter<GalleryModel> {
     }
 
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View listItemView = convertView;
+        View itemView = convertView;
 
-        if (listItemView == null)
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.card_item, parent, false);
+        if (itemView == null)
+            itemView = LayoutInflater.from(getContext()).inflate(R.layout.card_item, parent, false);
 
         GalleryModel galeryModel = getItem(position);
-        ImageView imageView = listItemView.findViewById(R.id.idImageViewGallery);
+        ImageView imageView = itemView.findViewById(R.id.idImageViewGallery);
 
         imageView.setImageResource(galeryModel.getImageId());
 
-        return listItemView;
+        /**
+         * A View finalItemView foi criada pois a itemView era utilizada dentro da classe,
+         * o que impossibilita a utlização da mesma no OnClickListener(), uma vez que ela
+         * demanda uma View que não será modificada posteriormente no código
+         */
+        View finalItemView = itemView;
+
+        imageView.setOnClickListener(view -> {
+            Intent imageFullScreen = new Intent(finalItemView.getContext(), ImageFullScreen.class);
+            imageFullScreen.putExtra("imageId", galeryModel.getImageId());
+            finalItemView.getContext().startActivity(imageFullScreen);
+        });
+
+        return itemView;
     }
 }
