@@ -7,7 +7,6 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -27,13 +26,19 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        replaceFragment(new GalleryFragment());
+        replaceFragment(new FragmentoInicial(), getSupportFragmentManager().beginTransaction());
     }
 
-    private void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    public static void replaceFragment(Fragment fragment, FragmentTransaction fragmentTransaction) {
         fragmentTransaction.replace(R.id.frame_layout, fragment);
+
+        /**
+         * Garante que a Pilha de Fragmentos seja criada corretamente. Quando não
+         * implementada, não é possível retornar ao Fragmento Inicial depois de
+         * acessar a Galeria ou o Player de Música
+         */
+        fragmentTransaction.addToBackStack(null);
+
         fragmentTransaction.commit();
     }
 
