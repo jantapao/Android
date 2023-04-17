@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Trab1</string>
     <string name="action_settings">Settings</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -10,6 +11,9 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
+    <string name="initial_header">Escolha UMA das Funções</string>
+    <string name="gallery_button">Galeria de Imagens</string>
+    <string name="player_button">Music Player</string>
 
     <string-array name="sertanejos">
         <item>Termina comigo antes</item>
@@ -23,6 +27,7 @@
         <item>Conselho bom</item>
         <item>Não me arranha</item>
     </string-array>
+
     <string-array name="pagodes">
         <item>Ele ou Eu</item>
         <item>Pode Parar</item>
@@ -35,6 +40,7 @@
         <item>Vencedor</item>
         <item>Você Não Sabe Voltar</item>
     </string-array>
+
     <string-array name="eletronicas">
         <item>10:35</item>
         <item>I´m Good</item>
@@ -47,6 +53,7 @@
         <item>Do It To It</item>
         <item>The Motto</item>
     </string-array>
+
     <string-array name="todos">
         <item>Termina comigo antes</item>
         <item>Abalo emocional</item>
@@ -79,6 +86,7 @@
         <item>Do It To It</item>
         <item>The Motto</item>
     </string-array>
+
     <string-array name="duracao_sertanejo">
         <item>3:16</item>
         <item>2:45</item>
@@ -91,6 +99,7 @@
         <item>3:30</item>
         <item>2:49</item>
     </string-array>
+
     <string-array name="duracao_pagodes">
         <item>3:22</item>
         <item>3:09</item>
@@ -103,6 +112,7 @@
         <item>3:49</item>
         <item>3:07</item>
     </string-array>
+
     <string-array name="duracao_eletronicas">
         <item>2:53</item>
         <item>2:55</item>
@@ -115,6 +125,7 @@
         <item>3</item>
         <item>3</item>
     </string-array>
+
     <string-array name="duracao_todos">
         <item>3:16</item>
         <item>2:45</item>
@@ -126,6 +137,7 @@
         <item>3:34</item>
         <item>3:30</item>
         <item>2:49</item>
+
         <!--paodes abaixo-->
         <item>3:22</item>
         <item>3:09</item>
@@ -137,6 +149,7 @@
         <item>3:39</item>
         <item>3:49</item>
         <item>3:07</item>
+
         <!--eletronicas abaixo-->
         <item>3:22</item>
         <item>3:09</item>
@@ -148,10 +161,7 @@
         <item>3:39</item>
         <item>3:49</item>
         <item>3:07</item>
-
     </string-array>
-
-
 
     <string-array name="tipos">
         <item>Todos</item>
@@ -159,6 +169,5 @@
         <item>Eletronica</item>
         <item>Pagode</item>
     </string-array>
-
 
 </resources>
