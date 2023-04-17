@@ -114,16 +114,16 @@
     </string-array>
 
     <string-array name="duracao_eletronicas">
-        <item>3:22</item>
-        <item>3:09</item>
-        <item>3:50</item>
-        <item>2:51</item>
-        <item>2:22</item>
-        <item>3:47</item>
-        <item>2:42</item>
-        <item>3:39</item>
-        <item>3:49</item>
-        <item>3:07</item>
+        <item>2:53</item>
+        <item>2:55</item>
+        <item>2:28</item>
+        <item>2:32</item>
+        <item>3:05</item>
+        <item>2:10</item>
+        <item>2:35</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
     </string-array>
 
     <string-array name="duracao_todos">
