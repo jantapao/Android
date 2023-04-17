@@ -59,7 +59,6 @@ public class FirstFragment extends Fragment implements RecyclerViewInterface{
         generos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                System.out.println(position);
                 dataInitialize(position);
             }
 
@@ -149,7 +148,6 @@ public class FirstFragment extends Fragment implements RecyclerViewInterface{
                 };
 
                 for (int i=0; i< musicsNome.length; i++){
-                    System.out.println(musicsNome[i]);
                     Musics music = new Musics(musicsNome[i], duracaoMusica[i], capaMusica[i], somMusica[i]);
                     musicsArrayList.add(music);
                 }
@@ -190,7 +188,6 @@ public class FirstFragment extends Fragment implements RecyclerViewInterface{
                 };
 
                 for (int i=0; i< musicsNome.length; i++){
-                    System.out.println(musicsNome[i]);
                     Musics music = new Musics(musicsNome[i], duracaoMusica[i], capaMusica[i], somMusica[i]);
                     musicsArrayList.add(music);
                 }
