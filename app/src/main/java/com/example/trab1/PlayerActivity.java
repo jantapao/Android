@@ -27,7 +27,6 @@ public class PlayerActivity extends AppCompatActivity {
 
     private int musica;
 
-    private ProgressBar progressBar;
 
     private MediaPlayer mediaplayer = new MediaPlayer();
 
@@ -67,7 +66,7 @@ public class PlayerActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         mediaplayer.release();
+        super.onDestroy();
     }
 }

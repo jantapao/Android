@@ -8,44 +8,56 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="5dp"
-        app:cardCornerRadius="5dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/capaMusica"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_launcher_background" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#5C36B6">
+
+            <ImageView
+                android:id="@+id/capaMusica"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/nomeMusica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:text="Aqui vem o nome e a descriçao!"
+                app:layout_constraintBottom_toBottomOf="@+id/capaMusica"
+                app:layout_constraintStart_toEndOf="@+id/capaMusica"
+                app:layout_constraintTop_toTopOf="@+id/capaMusica" />
+
+            <TextView
+                android:id="@+id/tempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:text="00:00"
+                app:layout_constraintBottom_toBottomOf="@+id/nomeMusica"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nomeMusica" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/nomeMusica"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:text="Aqui vem o nome e a descriçao!"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView"
-        app:layout_constraintEnd_toStartOf="@+id/tempo"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="@+id/cardView" />
 
 
-    <TextView
-        android:id="@+id/tempo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:text="00:00"
-        app:layout_constraintBottom_toBottomOf="@+id/nomeMusica"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nomeMusica" />
-
-    <ImageView
+    <!--<ImageView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="15dp"
@@ -53,7 +65,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

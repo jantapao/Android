@@ -3,6 +3,9 @@ package com.example.trab1;
 import android.os.Bundle;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.widget.Toolbar;
@@ -17,6 +20,7 @@ import com.example.trab1.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         replaceFragment(new FirstFragment());
 
 
@@ -46,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
@@ -58,10 +61,21 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.sair){
-            finish();
+            Toast toast = Toast.makeText(getApplicationContext(), "Saindo...", Toast.LENGTH_SHORT);
+            toast.show();
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    finish();
+                    Log.d("MainActivity", "Comando executado após o Toast desaparecer");
+                }
+            }, 1000); // 2000 milissegundos = 2 segundos de atraso
             return true;
         }
+
         return super.onOptionsItemSelected(item);
+
     }
 
     @Override
